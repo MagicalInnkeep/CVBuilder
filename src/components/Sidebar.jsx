@@ -20,6 +20,7 @@ import projects from '../assets/projects.svg'
 import certificates from '../assets/licence.svg'
 import achievements from  '../assets/reward.svg'
 import settings from '../assets/settings.svg'
+import result from '../assets/pageview.svg'
 
 /* Actual function*/
 function Sidebar(
@@ -27,7 +28,7 @@ function Sidebar(
      setActiveComponent
    }
 ){
-    const buttons = [
+    const cvSteps = [
         { image: persInfo, name: 'Personal Info' },
         { image: school, name: 'Education' },
         { image: techskills, name: 'Technical Skills' },
@@ -51,7 +52,7 @@ function Sidebar(
                     handleClick={() => setSidebar(sidebarClass==='smallSidebar'?'bigSidebar':'smallSidebar')}
                     />
             <div className='cvSteps'>
-                {buttons.map((btn) => (
+                {cvSteps.map((btn) => (
                     <Button
                         key={btn.name}
                         image={btn.image}
@@ -61,6 +62,17 @@ function Sidebar(
                         isExpanded={sidebarClass==='bigSidebar'}
                         handleClick={() => setActiveComponent(btn.name)}
                     />))}
+            </div>
+            <div className='Result'>
+            <Button
+                        key={'Result'}
+                        image={result}
+                        text={'Result'}
+                        classNa={`sidebar-btn ${sidebarClass}`}
+                        isActive={activeComponent === 'Result'}
+                        isExpanded={sidebarClass==='bigSidebar'}
+                        handleClick={() => setActiveComponent('Result')}
+                    />
             </div>
             <Button key='settings'
                     image={settings}

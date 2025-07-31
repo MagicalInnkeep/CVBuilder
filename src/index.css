@@ -61,3 +61,58 @@ body {
 .dark-mode .svg-icon {
   filter: invert(86%);
 }
+
+.App{
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  transition: margin-left 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 1
+}
+
+/* Top Bar Layout */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  flex-shrink: 0;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo img {
+  margin-right: 8px;
+}
+
+
+.botbar {
+  height: 25px;
+  flex-shrink: 0;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 5px;
+  transition: width 0.5s ease, background 0.3s ease, color 0.3s ease;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.content{
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}

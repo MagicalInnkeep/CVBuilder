@@ -13,7 +13,9 @@ function Button({
             onClick={handleClick}
         >
             <img src={image} alt={text} />
-            {isExpanded && `${text}`}
+            <span className={`button-label ${isExpanded ? 'show' : 'hide'}`}>
+             {text}
+            </span>
         </button>
     );
 }

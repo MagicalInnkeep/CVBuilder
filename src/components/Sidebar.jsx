@@ -2,6 +2,12 @@
  *  Here we have the buttons for the different sections of data to fill in.
  *  As well as a settings button?
  */
+
+/* Imports*/
+import { useState } from 'react'
+import './sidebar.css'
+import Button from './Button.jsx'
+
 /* Images */
 import menu from '../assets/menu.svg'
 import persInfo from '../assets/person.svg'
@@ -15,15 +21,10 @@ import certificates from '../assets/licence.svg'
 import achievements from  '../assets/reward.svg'
 import settings from '../assets/settings.svg'
 
-
-/* Components */
-import Button from './Button.jsx'
-
-/* Variables */
-
 /* Actual function*/
 function Sidebar(
-   { activeComponent
+   { activeComponent,
+     setActiveComponent
    }
 ){
     const buttons = [
@@ -37,30 +38,37 @@ function Sidebar(
         { image: certificates, name: 'Certificates' },
         { image: achievements, name: 'Achievements' },
     ];
+    const [sidebarClass,setSidebar]= useState('smallSidebar');
 
     return (
-        <aside className='sidebar'> 
+        <aside className={`sidebar ${sidebarClass}`}> 
             <Button key='menu'
                     image={menu}
-                    classNa='togglebtn'
+                    text='Menu'
+                    classNa={`togglebtn ${sidebarClass}`}
                     isActive={false}
-                    bigSidebar={false}
+                    isExpanded={false}
+                    handleClick={() => setSidebar(sidebarClass==='smallSidebar'?'bigSidebar':'smallSidebar')}
                     />
             <div className='cvSteps'>
-                {buttons.map((btn, index) => (
+                {buttons.map((btn) => (
                     <Button
-                        key={index}
+                        key={btn.name}
                         image={btn.image}
-                        classNa='sidebar-btn'
+                        text={btn.name}
+                        classNa={`sidebar-btn ${sidebarClass}`}
                         isActive={activeComponent === btn.name}
-                        bigSidebar={false}
+                        isExpanded={sidebarClass==='bigSidebar'}
+                        handleClick={() => setActiveComponent(btn.name)}
                     />))}
             </div>
             <Button key='settings'
                     image={settings}
-                    classNa='sidebar-btn'
+                    text='Settings'
+                    classNa={`sidebar-btn ${sidebarClass}`}
                     isActive={false}
-                    bigSidebar={false}
+                    isExpanded={sidebarClass==='bigSidebar'}
+                    handleClick={() => setActiveComponent('settings')}
                     />
         </aside>
     )

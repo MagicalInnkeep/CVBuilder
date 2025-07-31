@@ -4,16 +4,18 @@ function Button({
     text,
     classNa,
     isSelected,
-    bigSidebar}
-){
-    console.log('image src:', image);
-
+    isExpanded,
+    handleClick    
+}) {
     return (
-        <button className={isSelected?'activeBtn':'notActiveBtn' && classNa}>
-             <img src={image} alt={text} /> {bigSidebar?text:null}
+        <button 
+            className={`${classNa} ${isSelected ? 'activeBtn' : 'notActiveBtn'}`} 
+            onClick={handleClick}
+        >
+            <img src={image} alt={text} />
+            {isExpanded && `${text}`}
         </button>
-    )
-
+    );
 }
 
 export default Button;

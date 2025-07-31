@@ -4,10 +4,15 @@ import Sidebar from './components/Sidebar.jsx'
 
 function App() {
   
+  const [activeComponent, setActiveComponent]= useState('main')
+
   return (
     <div>
-      <h1>App</h1>
-      <Sidebar/>
+      <h1>{activeComponent}</h1>
+      <Sidebar 
+              activeComponent={activeComponent}
+              setActiveComponent={setActiveComponent}
+      />
     </div>
   )
 }

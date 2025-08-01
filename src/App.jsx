@@ -10,21 +10,21 @@ function App() {
   const [activeComponent, setActiveComponent]= useState('main')
 
   return (
-    <div class="App">
+    <div className="App">
 
       <Sidebar 
               activeComponent={activeComponent}
               setActiveComponent={setActiveComponent}
       />
       <main>
-        <div class="topbar">
-              <div class="logo"><img class="svg-icon" id="logo" src={cvBuilder} width="20" height="20" alt="logo"/> CVBuilder</div>
+        <div className="topbar">
+              <div className="logo"><img className="svg-icon" id="logo" src={cvBuilder} width="20" height="20" alt="logo"/> CVBuilder</div>
               <h1>{activeComponent}</h1>
               <Lightdark/>
           </div>
-          <div class="content"></div>
-          <div class="botbar">
-              <div class="version">CVBuilder v0.0.1</div>
+          <div className="content"></div>
+          <div className="botbar">
+              <div className="version">CVBuilder v0.0.1</div>
               <div>Created by Innkeep</div>
           </div>
 

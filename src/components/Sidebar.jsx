@@ -77,7 +77,7 @@ function Sidebar(
             <Button key='settings'
                     image={settings}
                     text='Settings'
-                    classNa={`sidebar-btn ${sidebarClass}`}
+                    classNa={`togglebtn ${sidebarClass}`}
                     isActive={false}
                     isExpanded={sidebarClass==='bigSidebar'}
                     handleClick={() => setActiveComponent('settings')}

@@ -82,3 +82,12 @@
   margin-left: 0;
   overflow: hidden;
 }
+
+.activeBtn>.svg-icon {
+  filter: invert(100%);
+}
+
+.activeBtn{
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}

@@ -3,13 +3,13 @@ function Button({
     image,
     text,
     classNa,
-    isSelected,
+    isActive,
     isExpanded,
     handleClick    
 }) {
     return (
         <button 
-            className={`${classNa} ${isSelected ? 'activeBtn' : 'notActiveBtn'}`} 
+            className={`${classNa} ${isActive ? 'activeBtn' : 'notActiveBtn'}`} 
             onClick={handleClick}
         >
             <img className='svg-icon' src={image} alt={text} />

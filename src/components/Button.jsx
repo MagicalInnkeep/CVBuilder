@@ -12,7 +12,7 @@ function Button({
             className={`${classNa} ${isSelected ? 'activeBtn' : 'notActiveBtn'}`} 
             onClick={handleClick}
         >
-            <img src={image} alt={text} />
+            <img class='svg-icon' src={image} alt={text} />
             <span className={`button-label ${isExpanded ? 'show' : 'hide'}`}>
              {text}
             </span>

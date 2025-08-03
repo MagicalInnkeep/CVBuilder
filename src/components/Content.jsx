@@ -6,9 +6,10 @@ import PersonalInfo from "./PersonalInfo";
 import Projects from "./Projects";
 import SoftSkills from "./SoftSkills";
 import TechnicalSkills from "./TechnicalSkills";
+import Welcome from "./Welcome";
 import WorkExperience from "./WorkExperience";
 
-function MainComp(
+function Content(
     {   activeComponent,
         setActiveComponent
     }
@@ -17,6 +18,7 @@ function MainComp(
     return (
         <div className="content">
             <h1>{activeComponent}</h1>
+            {activeComponent==="Welcome" && <Welcome setActiveComponent={setActiveComponent}/>}
             {activeComponent==="Personal Info" && <PersonalInfo setActiveComponent={setActiveComponent}/>}
             {activeComponent==="Education" && <Education setActiveComponent={setActiveComponent}/>}
             {activeComponent==="Technical Skills" && <TechnicalSkills setActiveComponent={setActiveComponent}/>}
@@ -30,4 +32,4 @@ function MainComp(
     )
 }
 
-export default MainComp;
+export default Content;

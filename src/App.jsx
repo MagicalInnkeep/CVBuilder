@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Sidebar from './components/Sidebar.jsx'
 import Lightdark from './components/lightdark.jsx'
-import MainComp from './components/main.jsx'
+import Content from './components/Content.jsx'
 
 /** Images */
 import cvBuilder from '../src/assets/pageview.svg'
@@ -9,7 +9,7 @@ import cvBuilder from '../src/assets/pageview.svg'
 
 function App() {
   
-  const [activeComponent, setActiveComponent]= useState('')
+  const [activeComponent, setActiveComponent]= useState('Welcome')
 
   return (
     <div className="App">
@@ -24,7 +24,7 @@ function App() {
               <Lightdark/>
           </div>
 
-          <MainComp 
+          <Content 
               activeComponent={activeComponent}
               setActiveComponent={setActiveComponent}
           />

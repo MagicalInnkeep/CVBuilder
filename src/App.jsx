@@ -9,8 +9,10 @@ import cvBuilder from '../src/assets/pageview.svg'
 
 function App() {
   
-  const [activeComponent, setActiveComponent]= useState('Welcome')
+  const [activeComponent, setActiveComponent]= useState('Welcome');
+  const [data, updatedata]=useState({personalInfo: []});
 
+  console.log(data);
   return (
     <div className="App">
 
@@ -27,6 +29,8 @@ function App() {
           <Content 
               activeComponent={activeComponent}
               setActiveComponent={setActiveComponent}
+              data={data}
+              updatedata={updatedata}
           />
 
           <div className="botbar">

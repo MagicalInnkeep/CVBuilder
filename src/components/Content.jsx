@@ -11,7 +11,9 @@ import WorkExperience from "./WorkExperience";
 
 function Content(
     {   activeComponent,
-        setActiveComponent
+        setActiveComponent,
+        data,
+        updatedata
     }
 ){
 
@@ -19,15 +21,15 @@ function Content(
         <div className="content">
             <h1>{activeComponent}</h1>
             {activeComponent==="Welcome" && <Welcome setActiveComponent={setActiveComponent}/>}
-            {activeComponent==="Personal Info" && <PersonalInfo setActiveComponent={setActiveComponent}/>}
-            {activeComponent==="Education" && <Education setActiveComponent={setActiveComponent}/>}
-            {activeComponent==="Technical Skills" && <TechnicalSkills setActiveComponent={setActiveComponent}/>}
-            {activeComponent==="Soft Skills" && <SoftSkills setActiveComponent={setActiveComponent}/>}
-            {activeComponent==="Languages" && <Languages setActiveComponent={setActiveComponent}/>}
-            {activeComponent==="Work Experience" && <WorkExperience setActiveComponent={setActiveComponent}/>}
-            {activeComponent==="Projects" && <Projects setActiveComponent={setActiveComponent}/>}
-            {activeComponent==="Certificates" && <Certificates setActiveComponent={setActiveComponent}/>}
-            {activeComponent==="Achievements" && <Achievements setActiveComponent={setActiveComponent}/>}
+            {activeComponent==="Personal Info" && <PersonalInfo setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
+            {activeComponent==="Education" && <Education setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
+            {activeComponent==="Technical Skills" && <TechnicalSkills setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
+            {activeComponent==="Soft Skills" && <SoftSkills setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
+            {activeComponent==="Languages" && <Languages setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
+            {activeComponent==="Work Experience" && <WorkExperience setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
+            {activeComponent==="Projects" && <Projects setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
+            {activeComponent==="Certificates" && <Certificates setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
+            {activeComponent==="Achievements" && <Achievements setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
         </div>
     )
 }

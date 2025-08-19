@@ -12,7 +12,10 @@ function PersonalInfo(
     const [formData,updateFormData]=useState(
         {
         fname: data?.personalInfo?.fname || '',
-        lname: data?.personalInfo?.lname || ''
+        lname: data?.personalInfo?.lname || '',
+        adress: data?.personalInfo?.adress || '',
+        email: data?.personalInfo?.email || '',
+        phone: data?.personalInfo?.phone || ''
         }
     );
     function handleFormData(e){
@@ -49,7 +52,36 @@ function PersonalInfo(
                     required 
                 />
             </label>
-            <span>Temp</span>
+            <label htmlFor="adress" >Adress 
+                <input 
+                    id="adress"
+                    type="text" 
+                    name="adress"  
+                    value={formData.adress} 
+                    onChange={(e)=>{handleFormData(e)}} 
+                    required 
+                />
+            </label>
+            <label htmlFor="email" >Email
+                <input 
+                    id="email"
+                    type="email" 
+                    name="email"  
+                    value={formData.email} 
+                    onChange={(e)=>{handleFormData(e)}} 
+                    required 
+                />
+            </label>
+            <label htmlFor="phone" >Phone
+                <input 
+                    id="phone"
+                    type="tel" 
+                    name="phone"  
+                    value={formData.phone} 
+                    onChange={(e)=>{handleFormData(e)}} 
+                    required 
+                />
+            </label>
             <Button key='check'
                     image={check}
                     text='Next'

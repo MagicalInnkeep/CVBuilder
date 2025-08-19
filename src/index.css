@@ -58,7 +58,8 @@ body {
 }
 
 /* Dark Mode - Light Gray SVG */
-.dark-mode .svg-icon {
+.dark-mode button.smallSidebar .svg-icon,
+.dark-mode button.bigSidebar .svg-icon {
   filter: invert(86%);
 }
 

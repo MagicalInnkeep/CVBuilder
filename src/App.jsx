@@ -12,7 +12,6 @@ function App() {
   const [activeComponent, setActiveComponent]= useState('Welcome');
   const [data, updatedata]=useState({personalInfo: []});
 
-  console.log(data);
   return (
     <div className="App">
 

@@ -71,7 +71,45 @@
 
 .button-label.show {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0);form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: "Inter", sans-serif;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  input {
+    margin-top: 0.4rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.6rem;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #2563eb; /* blue highlight */
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+  }
+  
+  button {
+    margin-top: 1rem;
+  }
   pointer-events: auto;
 }
 

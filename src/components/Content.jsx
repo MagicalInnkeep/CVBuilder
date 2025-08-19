@@ -8,6 +8,7 @@ import SoftSkills from "./SoftSkills";
 import TechnicalSkills from "./TechnicalSkills";
 import Welcome from "./Welcome";
 import WorkExperience from "./WorkExperience";
+import './form.css'
 
 function Content(
     {   activeComponent,

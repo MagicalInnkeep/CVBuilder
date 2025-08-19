@@ -1,7 +1,7 @@
 form {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
@@ -19,6 +19,7 @@ form {
     font-size: 0.95rem;
     font-weight: 500;
     color: var(--text-color);
+    margin-top: 5px;
   }
   
   input {

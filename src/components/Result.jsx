@@ -22,9 +22,14 @@ function Result({data}){
                     <div className='resumeBuild'>
                         <h2>Personal Info</h2>
                         <p>{data.personalInfo?.fname} {data.personalInfo?.lname}</p>
+                        <h2>Contact</h2>
                         <p>{data.personalInfo?.email}</p>
                         <p>{data.personalInfo?.phone}</p>
-
+                        {data.personalInfo.socials && data.personalInfo.socials.length>0 && ( <>
+                            {data.personalInfo?.socials?.map((socials) => (
+                            <p>{socials.platform} {socials.url} {socials.url && <a href={socials.url}>🔗</a>}</p>))}
+                            </>
+                        )}
                         <h2>Education</h2>
                         <ul>
                             {data.education?.map((edu, i) => (

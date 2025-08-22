@@ -70,6 +70,9 @@ function Education({ setActiveComponent, data, updatedata }) {
             <input
               type="number"
               name="startYear"
+              min="1900"
+              max="2099"
+              step="1"
               value={edu.startYear}
               onChange={(e) => handleChange(index, e)}
             />
@@ -80,6 +83,9 @@ function Education({ setActiveComponent, data, updatedata }) {
             <input
               type="number"
               name="endYear"
+              min="1900"
+              max="2099"
+              step="1"
               value={edu.endYear}
               onChange={(e) => handleChange(index, e)}
             />

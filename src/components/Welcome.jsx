@@ -1,13 +1,31 @@
 import Button from "./Button"
 import start from "../assets/start.svg"
+import upload from "../assets/upload.svg"
 import ExampleCarrousel from "./ExampleCarrousel"
 
 function Welcome(
     {
-    setActiveComponent
+    setActiveComponent, updatedata
     }
 ){
+    function handleImport(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+      
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          try {
+            const importedData = JSON.parse(event.target.result);
+            updatedata(importedData); 
+          } catch (error) {
+            alert("Invalid JSON file");
+            alert(error);
+          }
+        };
+        reader.readAsText(file);
+      }
     return (
+        
         <div>
             <div className="AppDescription">
                 <h3>Create a good looking CV in a flash</h3>
@@ -24,6 +42,20 @@ function Welcome(
                 </span>
             </div>
             <ExampleCarrousel/>
+            <div className="ImportData">
+                <h3>Not your first rodeo?</h3>
+                <p>Import your previous data with a click of a button! </p>
+                <Button
+                        type="button"
+                        handleClick={handleImport}
+                        image={upload}
+                        text="Import"
+                        classNa=""
+                        isActive={false}
+                        isExpanded={true}
+                        key="import"
+                    />
+            </div>
         </div>
     )
 }

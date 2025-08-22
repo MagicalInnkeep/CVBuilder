@@ -39,7 +39,7 @@ function Education({ setActiveComponent, data, updatedata }) {
       onSubmit={(e) => {
         e.preventDefault();
         handleSubmit();
-        setActiveComponent("TechnicalSkills");
+        setActiveComponent("Technical Skills");
       }}
     >
       {educationList.map((edu, index) => (

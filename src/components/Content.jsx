@@ -8,6 +8,7 @@ import SoftSkills from "./SoftSkills";
 import TechnicalSkills from "./TechnicalSkills";
 import Welcome from "./Welcome";
 import WorkExperience from "./WorkExperience";
+import Result from "./Result";
 import './form.css'
 
 function Content(
@@ -21,7 +22,7 @@ function Content(
     return (
         <div className="content">
             <h1>{activeComponent}</h1>
-            {activeComponent==="Welcome" && <Welcome setActiveComponent={setActiveComponent}/>}
+            {activeComponent==="Welcome" && <Welcome setActiveComponent={setActiveComponent} updatedata={updatedata}/>}
             {activeComponent==="Personal Info" && <PersonalInfo setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
             {activeComponent==="Education" && <Education setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
             {activeComponent==="Technical Skills" && <TechnicalSkills setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
@@ -31,6 +32,7 @@ function Content(
             {activeComponent==="Projects" && <Projects setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
             {activeComponent==="Certificates" && <Certificates setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
             {activeComponent==="Achievements" && <Achievements setActiveComponent={setActiveComponent} data={data} updatedata={updatedata}/>}
+            {activeComponent==="Result" && <Result data={data} />}
         </div>
     )
 }

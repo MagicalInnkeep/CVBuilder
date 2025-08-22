@@ -40,7 +40,7 @@ function Languages({ setActiveComponent, data, updatedata }) {
       onSubmit={(e) => {
         e.preventDefault();
         handleSubmit();
-        setActiveComponent("WorkExperience");
+        setActiveComponent("Work Experience");
       }}
     >
       {languages.map((soft, index) => (

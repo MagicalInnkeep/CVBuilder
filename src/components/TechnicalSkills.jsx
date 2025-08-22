@@ -40,7 +40,7 @@ function TechnicalSkills({ setActiveComponent, data, updatedata }) {
       onSubmit={(e) => {
         e.preventDefault();
         handleSubmit();
-        setActiveComponent("SoftSkills");
+        setActiveComponent("Soft Skills");
       }}
     >
       {techList.map((tech, index) => (
